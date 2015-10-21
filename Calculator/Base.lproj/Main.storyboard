@@ -265,7 +265,7 @@
                                                 </constraints>
                                                 <state key="normal" image="equal"/>
                                                 <connections>
-                                                    <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQ7-69-0Mj"/>
+                                                    <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVK-Is-oPr"/>
                                                 </connections>
                                             </button>
                                         </subviews>

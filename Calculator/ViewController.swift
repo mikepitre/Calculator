@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Add = "+"
         case Subtract = "-"
-        case Equals = "="
         case Empty = "Empty"
     }
 
@@ -49,27 +48,53 @@ class ViewController: UIViewController {
     
     //Actions
     @IBAction func numberPressed(sender: AnyObject) {
-        btnSound.play()
+        playSound()
         runningNumber += "\(sender.tag)"
         outputLbl.text = runningNumber
     }
     
     @IBAction func onDividePressed(sender: AnyObject) {
+        processOperation(Operation.Divide)
     }
     
     @IBAction func onMultiplyPressed(sender: AnyObject) {
+        processOperation(Operation.Multiply)
     }
     
     @IBAction func onSubtractPressed(sender: AnyObject) {
+        processOperation(Operation.Subtract)
     }
     
     @IBAction func onAddPressed(sender: AnyObject) {
+        processOperation(Operation.Add)
     }
     
     @IBAction func onEqualsPressed(sender: AnyObject) {
+        processOperation(currentOperation)
+    }
+   
+    
+    func processOperation(op: Operation) {
+        playSound()
+        
+        if currentOperation != Operation.Empty {
+            //Do math
+            
+        } else {
+            //First time operator was pressed
+            leftValStr = runningNumber
+            runningNumber = ""
+            currentOperation = op
+        }
     }
     
-    
+    func playSound() {
+        if btnSound.playing {
+            btnSound.stop()
+        } else {
+            btnSound.play()
+        }
+    }
     
 
 }
