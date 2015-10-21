@@ -229,11 +229,14 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcc-Lj-hQB">
-                                <rect key="frame" x="398" y="47" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45556" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcc-Lj-hQB">
+                                <rect key="frame" x="194" y="100" width="216" height="40"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bcf-64-72S"/>
+                                    <constraint firstAttribute="width" constant="200" id="ccc-fd-opk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -243,7 +246,9 @@
                             <constraint firstAttribute="trailing" secondItem="x3B-yV-K2N" secondAttribute="trailing" id="3C7-s5-1AO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7m2-81-zxl" secondAttribute="bottom" id="7hK-S8-Wuy"/>
                             <constraint firstItem="7m2-81-zxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ou-we-K5D"/>
+                            <constraint firstItem="XZE-XD-mJZ" firstAttribute="trailing" secondItem="Bcc-Lj-hQB" secondAttribute="trailing" constant="10" id="AGK-Np-eO9"/>
                             <constraint firstItem="XZE-XD-mJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KeC-H8-6SV"/>
+                            <constraint firstItem="Bcc-Lj-hQB" firstAttribute="top" secondItem="XZE-XD-mJZ" secondAttribute="top" constant="18" id="MBh-Jh-2Lf"/>
                             <constraint firstItem="q72-GG-cIB" firstAttribute="centerX" secondItem="XZE-XD-mJZ" secondAttribute="centerX" id="Qbt-qk-XxM"/>
                             <constraint firstItem="q72-GG-cIB" firstAttribute="centerY" secondItem="XZE-XD-mJZ" secondAttribute="centerY" constant="35" id="XAP-XE-CWZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x3B-yV-K2N" secondAttribute="bottom" id="deE-2z-pKs"/>
