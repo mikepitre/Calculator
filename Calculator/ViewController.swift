@@ -10,24 +10,34 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    enum Operation: String {
+        case Divide = "/"
+        case Multiply = "*"
+        case Add = "+"
+        case Subtract = "-"
+        case Equals = "="
+        case Empty = "Empty"
+    }
 
     //Outlets
     @IBOutlet weak var outputLbl: UILabel!
     
-    //btn pressed sound
+    //variables
+    var runningNumber = ""
+    var leftValStr = ""
+    var rightValStr = ""
+    var currentOperation = Operation.Empty
+    
     var btnSound: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //load path for audio file
         let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
-        
-        //pass path into sound url
         let soundUrl = NSURL.fileURLWithPath(path!)
         
-        //try to load sound from url, if can't print error to console
         do {
             try btnSound = AVAudioPlayer(contentsOfURL: soundUrl)
             btnSound.prepareToPlay()
@@ -40,9 +50,27 @@ class ViewController: UIViewController {
     //Actions
     @IBAction func numberPressed(sender: AnyObject) {
         btnSound.play()
+        runningNumber += "\(sender.tag)"
+        outputLbl.text = runningNumber
     }
     
-
+    @IBAction func onDividePressed(sender: AnyObject) {
+    }
+    
+    @IBAction func onMultiplyPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func onSubtractPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func onAddPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func onEqualsPressed(sender: AnyObject) {
+    }
+    
+    
+    
 
 }
 
