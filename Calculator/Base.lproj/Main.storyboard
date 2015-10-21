@@ -24,6 +24,13 @@
                                     <constraint firstAttribute="width" secondItem="x3B-yV-K2N" secondAttribute="height" multiplier="1:1" id="rzP-zJ-c5F"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="7m2-81-zxl">
+                                <rect key="frame" x="0.0" y="548" width="600" height="52"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Hmf-tz-D7e"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XZE-XD-mJZ">
                                 <rect key="frame" x="180" y="79" width="241" height="442"/>
                                 <subviews>
@@ -222,6 +229,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="x3B-yV-K2N" secondAttribute="trailing" id="3C7-s5-1AO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7m2-81-zxl" secondAttribute="bottom" id="7hK-S8-Wuy"/>
+                            <constraint firstItem="7m2-81-zxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ou-we-K5D"/>
                             <constraint firstItem="XZE-XD-mJZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KeC-H8-6SV"/>
                             <constraint firstItem="q72-GG-cIB" firstAttribute="centerX" secondItem="XZE-XD-mJZ" secondAttribute="centerX" id="Qbt-qk-XxM"/>
                             <constraint firstItem="q72-GG-cIB" firstAttribute="centerY" secondItem="XZE-XD-mJZ" secondAttribute="centerY" constant="35" id="XAP-XE-CWZ"/>
@@ -229,6 +238,7 @@
                             <constraint firstItem="x3B-yV-K2N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fme-CO-C8X"/>
                             <constraint firstItem="XZE-XD-mJZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nB9-vb-MfH"/>
                             <constraint firstItem="x3B-yV-K2N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q15-oy-Umc"/>
+                            <constraint firstAttribute="trailing" secondItem="7m2-81-zxl" secondAttribute="trailing" id="xT3-fp-3th"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -253,6 +263,7 @@
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
+        <image name="ground" width="888" height="72"/>
         <image name="multiply" width="111" height="114"/>
         <image name="space-bg" width="988" height="946"/>
         <image name="subtract" width="111" height="114"/>
