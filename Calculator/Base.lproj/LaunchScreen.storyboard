@@ -27,8 +27,8 @@
                                     <constraint firstAttribute="height" constant="147" id="cEP-fU-p6P"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="1FE-51-Iev">
-                                <rect key="frame" x="136" y="57" width="329" height="270"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="1FE-51-Iev">
+                                <rect key="frame" x="136" y="50" width="329" height="270"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="tjX-WJ-Aa4">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="48"/>
