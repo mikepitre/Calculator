@@ -11,6 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    //Outlets
+    @IBOutlet weak var outputLbl: UILabel!
+    
     enum Operation: String {
         case Divide = "/"
         case Multiply = "*"
@@ -18,16 +21,13 @@ class ViewController: UIViewController {
         case Subtract = "-"
         case Empty = "Empty"
     }
-
-    //Outlets
-    @IBOutlet weak var outputLbl: UILabel!
     
     //variables
     var runningNumber = ""
     var leftValStr = ""
     var rightValStr = ""
     var currentOperation = Operation.Empty
-    
+    var result = ""
     var btnSound: AVAudioPlayer!
     
     override func viewDidLoad() {
@@ -79,6 +79,27 @@ class ViewController: UIViewController {
         
         if currentOperation != Operation.Empty {
             //Do math
+            
+            // in case a user chooses 2 operators in a row
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == Operation.Multiply {
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                } else if currentOperation == Operation.Subtract {
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                }
+                
+                leftValStr = result
+                outputLbl.text = result
+            }
+           
+            currentOperation = op
             
         } else {
             //First time operator was pressed
